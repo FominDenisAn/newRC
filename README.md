@@ -1,1 +1,1 @@
-# newRC
+# newRС.github.io
