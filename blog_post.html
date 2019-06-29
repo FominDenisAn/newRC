@@ -1,0 +1,399 @@
+@ -0,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DF</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-1-4-2.min.js"></script> 
+
+<script type="text/javascript" src="js/jquery-ui.min.js"></script> 
+<script type="text/javascript" src="js/showhide.js"></script>  
+<script type="text/JavaScript" src="js/jquery.mousewheel.js"></script> 
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js">
+
+
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script> 
+
+</head>
+
+<body id="subpage">
+
+<div id="templatemo_header_wrapper">
+	<div id="site_title"><h1><a href="#">Denis Fomin</a></h1></div>
+     <div id="templatemo_menu" class="ddsmoothmenu">
+        <ul>
+            <li><a href="index.html" class="selected">Главная</a></li>
+            <li><a href="about.html">Навыки</a>
+                <ul>
+                    <li><span class="top"></span><span class="bottom"></span></li>
+                    <li><a href="#submenu1">Всплывающее меню 1</a></li>
+                    <li><a href="#submenu2">Всплывающее меню 2</a></li>
+                    <li><a href="#submenu3">Всплывающее меню 3</a></li>
+              	</ul>
+            </li>
+            <li><a href="portfolio.html">Работы</a>
+                <ul>
+                    <li><span class="top"></span><span class="bottom"></span></li>
+                    <li><a href="#submenu1">Всплывающее меню 1</a></li>
+                    <li><a href="#submenu2">Всплывающее меню 2</a></li>
+                    <li><a href="#submenu3">Всплывающее меню 3</a></li>
+                    <li><a href="#submenu4">Всплывающее меню 4</a></li>
+                    <li><a href="#submenu5">Всплывающее меню 5</a></li>
+              	</ul>
+            </li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+        <br style="clear: left" />
+    </div> <!-- end of templatemo_menu -->
+    <div class="cleaner"></div>
+</div>	<!-- END of templatemo_header_wrapper -->
+
+<div id="templatemo_main">
+	<div id="content">
+    	<div class="post">
+            	
+            <h2>Что такое MVC</h2>
+                    
+            <img src="images/blog/01.jpg" alt="Image 01" />   
+            <p><span lang="ru">Концепция MVC (Model-View-Controller: модель-вид-контроллер) очень часто упоминается в мире веб программирования в последние годы. Каждый, кто хоть как-то связан с разработкой веб приложений, так или иначе сталкивался с данным акронимом. Сегодня мы разберёмся, что такое - концепция MVC, и почему она стала популярной.</span></p>
+<h3><span lang="ru">Древнейшая история</span></h3>
+<p><span lang="ru">MVC &mdash; это не шаблон проекта, это конструкционный шаблон, который описывает способ построения структуры нашего приложения, сферы ответственности и взаимодействие каждой из частей в данной структуре.</span></p>
+<p><span lang="ru">Впервые она была описана в 1979 году, конечно же, для другого окружения. Тогда не существовало концепции веб приложения. Tim Berners Lee (Тим Бернерс Ли)  посеял семена World Wide Web (WWW) в начале девяностых и навсегда изменил мир. Шаблон, который мы используем сегодня, является адаптацией оригинального шаблона к веб разработке.</span></p>
+<p><span lang="ru">Бешеная популярность данной структуры в веб приложениях сложилась благодаря её включению в две среды разработки, которые стали очень популярными: Struts и Ruby on Rails. Эти две среды разработки наметили пути развития для сотен рабочих сред, созданных позже.</span></p>
+<p align="center"><img src="lessons/les666/frameworks.jpg" border="0" alt="" /></p>
+<h3><span lang="ru">MVC для веб приложений</span></h3>
+<p><span lang="ru">Идея, которая лежит в основе конструкционного шаблона MVC, очень проста: нужно чётко разделять ответственность за различное функционирование в наших приложениях: </span></p>
+<p align="center"><img src="lessons/les666/components.jpg" border="0" alt="" /></p>
+<p><span lang="ru">Приложение разделяется на три основных компонента, каждый из которых отвечает за различные задачи. Давайте подробно разберём компоненты на примере.</span></p>
+<h4><span lang="ru">Контроллер (Controller)</span></h4>
+<p><span lang="ru"><strong>Контроллер</strong> управляет запросами пользователя (получаемые в виде запросов HTTP GET или POST, когда пользователь нажимает на элементы интерфейса для выполнения различных действий). Его основная функция &mdash; вызывать и координировать действие необходимых ресурсов и объектов, нужных для выполнения действий, задаваемых пользователем. Обычно контроллер вызывает соответствующую модель для задачи и выбирает подходящий вид.</span></p>
+<h4><span lang="ru">Модель (Model)</span></h4>
+<p><span lang="ru"><strong>Модель</strong> - это данные и правила, которые используются для работы с данными, которые представляют концепцию управления приложением. В любом приложении вся структура моделируется как данные, которые обрабатываются определённым образом. Что такое пользователь для приложения &mdash; сообщение или книга?  Только данные, которые должны быть обработаны в соответствии с правилами (дата не может указывать в будущее, e-mail должен быть в определённом формате, имя не может быть длиннее Х символов, и так далее).</span></p>
+<p align="center"><img src="lessons/les666/ModelData.jpg" border="0" alt="" /></p>
+<p><span lang="ru">Модель даёт контроллеру представление данных, которые запросил пользователь (сообщение, страницу книги, фотоальбом, и тому подобное). Модель данных будет одинаковой, вне зависимости от того, как мы хотим представлять их пользователю. Поэтому мы выбираем любой доступный вид для отображения данных.</span></p>
+<p><span lang="ru">Модель содержит наиболее важную часть логики нашего приложения, логики, которая решает задачу, с которой мы имеем дело (форум, магазин, банк, и тому подобное). Контроллер содержит в основном организационную логику для самого приложения (очень похоже на ведение домашнего хозяйства).</span></p>
+<h4><span lang="ru">Вид (View)</span></h4>
+<p><span lang="ru"><strong>Вид</strong> обеспечивает различные способы представления данных, которые получены из модели. Он может быть шаблоном, который заполняется данными. Может быть несколько различных видов, и контроллер выбирает, какой подходит наилучшим образом для текущей ситуации.</span></p>
+<p><span lang="ru">Веб приложение обычно состоит из набора контроллеров, моделей и видов. Контроллер может быть устроен как основной, который получает все запросы и вызывает другие контроллеры для выполнения действий в зависимости от ситуации.</span></p>
+<h3><span lang="ru">Разберём пример</span></h3>
+<p><span lang="ru">Предположим, нам надо разработать онлайновый книжный магазин. Пользователь может выполнять следующие действия: просматривать книги, регистрироваться, покупать, добавлять пункты к текущему заказу, создавать или удалять книги (если он администратор). Давайте посмотрим, что произойдёт, когда пользователь нажмёт на категорию <em>фэнтези</em> для просмотра названий книг, которые имеются в нашем магазине.</span></p>
+<p><span lang="ru">У нас есть определённый контроллер для обработки всех действий, связанных с книгами (просматривать, редактировать, создавать и так далее). Давайте назовем его <em>books_controller.php</em> в нашем примере. Также нам нужна модель, например, <em>book_model.php</em>, которая обрабатывает данные и логику, связанные с позицией в магазине. В заключение, нам нужно несколько видов для представления данных, например, список книг, страница для редактирования и так далее.</span></p>
+<p><span lang="ru">Следующий рисунок показывает, как обрабатывается запрос пользователя для просмотра списка книг по теме <em>фэнтези</em>:</span></p>
+<p align="center"><img src="lessons/les666/diagram.jpg" border="0" alt="" /></p>
+<p><span lang="ru">Контроллер (books_controller.php) получает запрос пользователя [1] (запрос HTTP GET или POST). Мы можем организовать центральный контроллер, например, index.php, который получает запрос и вызывает books_controller.php. </span></p>
+<p><span lang="ru">Контроллер проверяет запрос и параметры, а затем вызывает модель(book_model.php), <em>запрашивая</em> у неё список доступных книг по теме <em>фэнтези</em> [2].</span></p>
+<p><span lang="ru">Модель получает данные из базы (или из другого источника, в котором хранится информация) [3], применяет фильтры и необходимую логику, а затем возвращает данные, которые представляют список книг [4].</span></p>
+<p><span lang="ru">Контроллер использует подходящий вид [5] для представления данных пользователю [6-7]. Если запрос приходит с мобильного телефона, используется вид для мобильного телефона; если пользователь использует определённое оформление интерфейса, то выбирается соответствующий вид, и так далее.</span></p>
+<h3><span lang="ru">В чем преимущества?</span></h3>
+<p><span lang="ru">Самое очевидное преимущество, которое мы получаем от использования концепции MVC &mdash; это чёткое разделение логики представления (интерфейса пользователя) и логики приложения. </span></p>
+<p><span lang="ru">Поддержка различных типов пользователей, которые используют различные типы устройств является общей проблемой наших дней. Предоставляемый интерфейс должен различаться, если запрос приходит с персонального компьютера или с мобильного телефона. Модель возвращает одинаковые данные, единственное различие заключается в том, что контроллер выбирает различные виды для вывода данных. </span></p>
+<p><span lang="ru">Помимо изолирования видов от логики приложения, концепция MVC существенно уменьшает сложность больших приложений. Код получается гораздо более структурированным, и, тем самым, облегчается поддержка, тестирование и повторное использование решений.</span></p>
+<h3><span lang="ru">А зачем использовать рабочую среду?</span></h3>
+<p><span lang="ru">Когда вы используете рабочую среду, базовая структура MVC уже подготовлена, и вам остаётся только расширить структуру, размещая ваши файлы в соответствующих директориях для соответствия шаблону MVC. Кроме того, у вас будет набор функций, которые уже написаны и хорошо протестированы.</span></p>
+<p><span lang="ru">Рассмотрим cakePHP в качестве примера рабочей среды MVC. После установки у вас будет три основных директории:</span></p>
+<ul>
+<li>app/</li>
+<li>cake/</li>
+<li>vendors/</li>
+</ul>
+<p><span lang="ru">Папка <strong>app</strong> является местом размещения ваших файлов. Это место для разработки вашей части приложения.</span></p>
+<p><span lang="ru">В папке <strong>cake</strong> размещаются файлы cakePHP (функциональность рабочей среды).</span></p>
+<p><span lang="ru">Папка <strong>vendors</strong> служит для хранения библиотек PHP сторонних разработчиков.</span></p>
+<p><span lang="ru">Ваше рабочее пространство (директория app) имеет следующую структуру:</span></p>
+<ul>
+<li>app/         
+<ul>
+<li>config/</li>
+<li>controllers/</li>
+<li>locale/</li>
+<li>models/</li>
+<li>plugins/</li>
+<li>tests/</li>
+<li>tmp/</li>
+<li>vendors/</li>
+<li>views/</li>
+<li>webroot/</li>
+</ul>
+</li>
+</ul>
+<p><span lang="ru">Вам нужно размещать ваши контроллеры в директории <strong>controllers</strong>, модели в директории <strong>models</strong> и виды в директории  <strong>views</strong>!</span></p>
+<p><span lang="ru">Как только вы начнёте использовать рабочую среду, то сразу станет ясно, где размещается практически любая часть вашего приложения, которую надо создать или модифицировать. Такая организация сама по себе значительно упрощает процесс разработки и поддержки приложения.</span></p>
+<h3><span lang="ru">Использование рабочей среды для нашего примера</span></h3>
+<p><span lang="ru">Так как данный урок не имеет целью показать процесс создания приложения с помощью cakePHP, то мы покажем только код для модели, контроллера и вида с комментариями о преимуществах использования рабочей среды MVC. Код специально упрощён и непригоден для использования в реальном приложении.</span></p>
+<p><span lang="ru">Помните, мы рассматривали книжный магазин и любопытного пользователя, который хотел увидеть полный список книг по теме <em>фэнтези</em>. Контроллер получал запрос пользователя и координировал необходимые действия.</span></p>
+<p><span lang="ru">Итак, как только пользователь нажимает кнопку, браузер запрашивает данный url:</span></p>
+<pre class="brush:xhtml"> www.ourstore.com/books/list/fantasy</pre>
+<p><span lang="ru">CakePHP форматирует URL по шаблону <em>/controller/action/param1/param2</em> , где <em>action</em> - это функция, которая вызывается контроллером. В старом классическом виде url будет выглядеть так:</span></p>
+<pre class="brush:xhtml"> www.ourstore.com/books_controller.php?action=list&amp;category=fantasy</pre>
+<h4><span lang="ru">Контроллер</span></h4>
+<p><span lang="ru">В рабочей среде cakePHP, наш контроллер будет выглядеть так:</span></p>
+<pre class="brush:php">&lt;?php<br /><br />class BooksController extends AppController {<br /><br /> function list($category) {<br /><br /> $this-&gt;set('books', $this-&gt;Book-&gt;findAllByCategory($category));<br /><br /> }<br /><br /> function add() { ... ... }<br /><br /> function delete() { ... ... }<br /><br /> ... ... } ?&gt;<br /></pre>
+<p><span lang="ru">Просто, не так ли?. Данный контроллер будет сохранен как<em> books_controller.php</em> и размещён в <em>/app/controllers</em>. Он содержит список функций, которые  выполняют действия для нашего примера, а также другие функции для выполнения связанных с книгами операций (добавить новую книгу, удалить книгу, и так далее). </span></p>
+<p><span lang="ru">Рабочая среда предоставляет нам множество готовых решений и нужно только сформировать список книг. Есть базовый класс, в котором уже определено базовое функционирование контроллера, таким образом, надо унаследовать свойства и функции этого класса (<em>AppController</em> является наследником <em>Controller</em>).</span></p>
+<p><span lang="ru">Все что нужно сделать в списке действий &mdash; вызвать модель для получения данных и затем выбрать вид для представления их пользователю. Вот как это делается.</span></p>
+<p><span lang="ru"><em>this-&gt;Book</em> - это наша модель, и часть кода:</span></p>
+<pre class="brush:php"> $this-&gt;Book-&gt;findAllByCategory($category) </pre>
+<p><span lang="ru">сообщает модели, что нужно вернуть список книг по выбранной теме (мы рассмотрим модель позже).</span></p>
+<p><span lang="ru">Метод <em>set</em> в строке:</span></p>
+<pre class="brush:php"> $this-&gt;set('books', $this-&gt;Book-&gt;findAllByCategory($category)); </pre>
+<p><span lang="ru">Контроллер передаёт данные виду. Переменная <em>books</em> принимает данные, возвращённые моделью, и они становятся доступными для вида.</span></p>
+<p><span lang="ru">Теперь остаётся только вывести на экран вид, но эта функция выполняется автоматически в cakePHP, если мы используем вид по умолчанию. Если мы хотим использовать другой вид, то надо явно вызвать метод <em>render</em>.</span></p>
+<h4><span lang="ru">Модель</span></h4>
+<p><span lang="ru">Модель даже ещё проще:</span></p>
+<pre class="brush:php">&lt;?php<br /><br />class Book extends AppModel { <br /><br />}<br /><br />?&gt;<br /></pre>
+<p><span lang="ru">Почему она пустая? Потому что она является наследником базового класса, который обеспечивает необходимую функциональность и нам нужно использовать соглашение об именах в CakePHP для того, чтобы рабочая среда выполняла все другие задачи автоматически. Например, cakePHP известно на основании имени, что данная модель используется в <em>BooksController</em>, и что она имеет доступ к таблице базы данных с именем books. </span></p>
+<p><span lang="ru">С таким определением у нас будет модель, которая может только читать, удалять или сохранять данные в базе данных.</span></p>
+<p><span lang="ru">Код сохраняем как <em>book.php</em> в папке <em>/app/models</em>.</span></p>
+<h4><span lang="ru">Вид</span></h4>
+<p><span lang="ru">Все, что нам нужно теперь сделать &mdash; это создать вид (по крайней мере, один) для списка действий. Вид будет иметь код HTML и несколько (как можно меньше) строк кода PHP для организации цикла по массиву книг, которые предоставляется моделью.</span></p>
+<pre class="brush:php">&lt;table&gt; <br />	&lt;tr&gt; <br />		&lt;th&gt;Название&lt;/th&gt; <br />		&lt;th&gt;Автор&lt;/th&gt; <br />		&lt;th&gt;Цена&lt;/th&gt; <br />	&lt;/tr&gt;<br /><br />&lt;?php 	foreach ($books as $book): ?&gt; <br />	&lt;tr&gt; <br />		&lt;td&gt; &lt;?php echo $book['Book']['title']; ?&gt; &lt;/td&gt; <br />		&lt;td&gt; &lt;?php echo $book['Book']['author']; ?&gt; &lt;/td&gt; <br />		&lt;td&gt; &lt;?php echo $book['Book']['price']; ?&gt; &lt;/td&gt; <br />	&lt;/tr&gt; <br />&lt;?php endforeach; ?&gt;<br /><br />&lt;/table&gt;<br /></pre>
+<p><span lang="ru">Как можно заметить, вид создаёт не полноценную страницу, а лишь фрагмент HTML (таблицу в данном случае). Потому, что CakePHP обеспечивает другой способ для определения шаблона страницы, и вид вставляется в данный шаблон. Рабочая среда также обеспечивает нас некоторыми вспомогательными объектами для выполнения общих задач во время создания частей HTML страницы (вставка форм, ссылок, Ajax или JavaScript).</span></p>
+<p><span lang="ru">Сохраняем вид как <em>list.ctp</em> ( list &mdash; это имя действия, а ctp означает шаблон CakePHP) в папке <em>/app/views/books</em> (потому, что это вид для действия контроллера).</span></p>
+<p><span lang="ru">Вот так выполняются все три компонента с помощью рабочей среды CakePHP!</span></p>
+
+          	
+            <div class="meta">
+                <span class="admin">Denis Fomin</span><span class="date">20/04/2019</span><span class="tag"><a href="#">Templates</a>, <a href="#">Freebies</a></span><span class="comment"><a href="#">256 comments</a></span>
+                
+                <div class="cleaner"></div>
+            </div> 
+        </div>
+        
+        <div class="cleaner h40"></div>
+            <h3>Комментарии:</h3>
+                        
+              	<div id="comment_section">
+                	<ol class="comments first_level">
+                        
+                        <li>
+                            <div class="comment_box commentbox1">
+                                    
+                                <div class="gravatar">
+                                    <img class="image_frame" src="images/avator.png" alt="author 6" />
+                                </div>
+                                
+                                <div class="comment_text">
+                                    <div class="comment_author">Пользователь(24536) <span class="date">21/04/2019</span> <span class="time">11:05 pm</span></div>
+                                    <p>Пример комментариев после информационного блока..</p>
+                                  <div class="reply"><a href="#">Ответ</a></div>
+                                </div>
+                                <div class="cleaner"></div>
+                            </div> 
+                        </li>
+                        
+                        <li>
+                            	<ol class="comments">
+                            
+                                    <li>
+                                        <div class="comment_box commentbox2">
+                                        
+                                        <div class="gravatar">
+                                            <img class="image_frame" src="images/avator.png" alt="author 6" />
+                                        </div>
+                                        <div class="comment_text">
+                                        <div class="comment_author">Пользователь(45424262) <span class="date">21/04/2019</span> <span class="time">10:41 pm</span></div>
+                                        <p>Комментарий предыдущего комментария.</p>
+                                        <div class="reply"><a href="#">Ответ</a></div>
+                                        </div>
+                                        
+                                        <div class="cleaner"></div>
+                                        </div> 
+                                    </li>
+                                    
+                                    <li>
+                                        <ol class="comments">
+                                    
+                                            <li>
+                                                <div class="comment_box commentbox1">
+                                                
+                                                    <div class="gravatar">
+                                    <img class="image_frame" src="images/avator.png" alt="author 6" />
+                                </div>
+                                                    <div class="comment_text">
+                                                        <div class="comment_author">Пользователь(157680986) <span class="date">21/04/2019</span> <span class="time">10:15 am</span></div>
+                                                        <p>Последний комментарий этой беседы.</p>
+                                                      <div class="reply"><a href="#">Ответ</a></div>
+                                                    </div>
+                                                    
+                                                    <div class="cleaner"></div>
+                                                </div>  
+                                            </li>
+                                            
+                                        </ol>
+                        
+                        			</li>
+                                </ol>
+                                
+						</li>
+                        
+                        <li>
+                            <div class="comment_box commentbox1">
+                                     
+                                <div class="gravatar">
+                                    <img class="image_frame" src="images/avator.png" alt="author 6" />
+                                </div>
+                                <div class="comment_text">
+                                    <div class="comment_author">Пользователь(257880986) <span class="date">22/04/2019</span> <span class="time">07:35 am</span></div>
+                                    <p>Следующий комментарий</p>
+                                  <div class="reply"><a href="#">Ответ</a></div>
+                                </div>
+                                
+                                <div class="cleaner"></div>
+                            </div>  
+                            
+                        </li>
+                        
+                        <li>
+                            <div class="comment_box commentbox1">
+                                    
+                               <div class="gravatar">
+                                    <img class="image_frame" src="images/avator.png" alt="author 6" />
+                                </div>
+                                <div class="comment_text">
+                                    <div class="comment_author">Пользователь(976530986) <span class="date">27/04/2019</span> <span class="time">10:54 pm</span></div>
+                                    <p>Последний комментарий</p>
+                                  <div class="reply"><a href="#">Ответ</a></div>
+                                </div>
+                                
+                                <div class="cleaner"></div>
+                            </div> 
+                        </li>
+                        
+                </ol>
+                <div class="cleaner h20"></div>    
+          		<div class="pagging">
+                    <ul>
+                        <li><a href="#">Предыдущие</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">Следующие</a></li>
+                    </ul>
+                </div>    
+                    
+                </div>
+                
+                <div class="cleaner h20"></div>
+                
+                <div id="comment_form">
+                    <h3>Комментировать:</h3>
+                    
+                    <form action="#" method="get">
+						<div class="form_row">
+							<label>Ваше Имя (* обязательно)</label><br />
+							<input type="text" name="name" />
+						</div>
+                        
+						<div class="form_row">
+							<label>Email  (* Обязательно)</label><br />
+							<input type="text" name="name" />
+						</div>
+                        
+						<div class="form_row">
+							<label>Ваш комментарий...</label><br />
+							<textarea  name="comment" rows="" cols=""></textarea>
+						</div>
+			
+						<input type="submit" name="Отправить" value="Отправить" class="submit_btn" />
+					</form>
+                
+            	</div>
+            <div class="cleaner"></div>
+    </div>
+    
+    <div id="sidebar">
+    	<h3>Другие темы</h3>
+        <ul class="templatemo_list">
+        	<li><a href="#">Основы Git</a></li>
+            <li><a href="#">Etiam tempus quam eu</a></li>
+        	<li><a href="#">Что такое Linux или Ubuntu для начинающих</a></li>
+            <li><a href="#">Новые темы для WordPress</a></li>
+            <li><a href="#">Объектная модель браузера</a></li>
+        </ul>
+        
+        <div class="cleaner h30"></div>
+
+        <h3>Предыдущие статьи</h3>
+        <ul class="recent_post">
+            <li><a href="#">JavaScript</a>Пользовательские скрипты в браузере</li>
+            <li><a href="#">JavaScript</a>HotRuby — свободная реализация виртуальной машины Ruby на JavaScript и Flash</li>
+            <li><a href="#">PHP</a>Проект php4Applications</li>
+            <li><a href="#">PHP</a>«Paamayim Nekudotayim» (иврит: פעמיים נקודתיים) или просто «двойное двоеточие»</li>
+            <li><a href="#">Adobe</a>Программное обеспечение компании Adobe</li>
+        </ul>
+    </div> 
+    <div class="cleaner"></div>
+</div> 
+
+<div id="templatemo_bottom_wrapper">
+    <div id="templatemo_bottom">
+    	<div class="col one_third">
+        	<h4><span></span>Карта сайта</h4>
+            <div class="bottom_box">
+                <ul class="footer_list">
+                    <li><a href="#"><a href="C:\Users\1\Documents\GitHub\FominDenisAn\123/index.html">Главная</a></li>
+                    <li><a href="#"><a href="C:\Users\1\Documents\GitHub\FominDenisAn\123/about.html">Проект</a></li>
+                    <li><a href="#"><a href="C:\Users\1\Documents\GitHub\FominDenisAn\123/portfolio.html">Работы</a></li>
+                    <li><a href="#"><a href="C:\Users\1\Documents\GitHub\FominDenisAn\123/blog.html">Блог</a></li>
+                                    </ul>  
+			</div>
+        </div>
+        <div class="col one_third">
+        	<h4><span></span>Про меня</h4>
+            <div class="bottom_box">
+              <ul class="twitter_post">
+                    <li>По всем вопросам и предложениям, обращайтесь: <a href="mailto:denfomin007@icloud.com">denfomin007@icloud.com</a></li>
+                    <li>Или посетите страницу <a href="C:\Users\1\Documents\GitHub\FominDenisAn\123\contact.html">Контакты</li>
+                </ul>
+			</div>
+        </div>
+        <div class="col one_third no_margin_right">
+        	<h4><span></span>Про сайт</h4>
+            <div class="bottom_box">
+                <p><em>Данный сайт явлется учебным пособием, в котором будет дополняться информация за счет изучения нового материала</em></p><br />                        
+                <div class="footer_social_button">
+                    <a href="#"><img src="images/facebook.png" title="facebook" alt="facebook" /></a>
+                    <a href="#"><img src="images/flickr.png" title="flickr" alt="flickr" /></a>
+                    <a href="#"><img src="images/twitter.png" title="twitter" alt="twitter" /></a>
+                    <a href="#"><img src="images/youtube.png" title="youtube" alt="youtube" /></a>
+                    <a href="#"><img src="images/feed.png" title="rss" alt="rss" /></a>
+                </div>
+            </div>
+        </div>
+        
+    	<div class="cleaner"></div>
+    </div> 
+</div> 
+
+<div id="templatemo_footer_wrapper">
+    <div id="templatemo_footer">
+    	Copyright © 2019 Denis Fomin 
+    </div> 
+</div>
+
+</body>
+</html>
