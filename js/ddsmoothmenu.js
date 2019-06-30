@@ -1,4 +1,6 @@
-detectwebkit: navigator.userAgent.toLowerCase().indexOf("applewebkit")!=-1, //detect WebKit browsers (Safari, Chrome etc)
+var ddsmoothmenu={
+
+	detectwebkit: navigator.userAgent.toLowerCase().indexOf("applewebkit")!=-1, //detect WebKit browsers (Safari, Chrome etc)
 detectie6: document.all && !window.XMLHttpRequest,
 
 getajaxmenu:function($, setting){ //function to fetch external page containing the panel DIVs
